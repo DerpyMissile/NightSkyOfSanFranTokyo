@@ -4,8 +4,38 @@ Wow!
 My first ever Yarn script in Unity!
 
 -> Gosh!
+    <<set $testVar += 1>>
+    <<jump testJump3>>
 -> Incredible!
+    <<jump testJump2>>
 -> I'm amazed!
+    <<jump testJump>>
 
 Anyway, time to get writing!
+===
+
+title: testJump
+---
+heeheehaw
+===
+
+title: testJump2
+---
+number go up
+testHand.changeNumber();
+===
+
+title: testJump3
+---
+yeehaw?
+-> Yeehaw.
+    <<set $testVar += 1>>
+-> What?
+
+<<if $testVar == 2>>
+    God: Why hello there
+    <<numero 1>>
+<<else>>
+    hmmm
+<<endif>>
 ===
