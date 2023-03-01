@@ -17,11 +17,11 @@ public class SceneTransition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        player.GetComponent<Rigidbody2D>().velocity = new Vector2(1, 0);
+        player.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
         for(int i=0; i<walls.Length; ++i){
             if(player.GetComponent<BoxCollider2D>().IsTouching(walls[i])){
                 if(i==0){
-                    player.transform.position = walls[1].transform.position;
+                    player.transform.position = new Vector2(walls[1].transform.position.x, -26);
                 }
             }
         }
