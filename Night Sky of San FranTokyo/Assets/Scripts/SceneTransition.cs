@@ -19,7 +19,6 @@ public class SceneTransition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        player.GetComponent<Rigidbody2D>().velocity = new Vector2(5, 0);
         for(int i=0; i<cameraNoWalls.Length; ++i){
             if(player.GetComponent<BoxCollider2D>().IsTouching(cameraNoWalls[i])){
                 if(cameraDetached){
@@ -32,9 +31,9 @@ public class SceneTransition : MonoBehaviour
         for(int i=0; i<walls.Length; ++i){
             if(player.GetComponent<BoxCollider2D>().IsTouching(walls[i])){
                 if(i%2==0){
-                    player.transform.position = new Vector2(walls[i+1].transform.position.x+5, -26);
+                    player.transform.position = new Vector3(walls[i+1].transform.position.x+5, -25, player.transform.position.z);
                 }else{
-                    player.transform.position = new Vector2(walls[i-1].transform.position.x-5, -26);
+                    player.transform.position = new Vector3(walls[i-1].transform.position.x-5, -25, player.transform.position.z);
                 }
             }
         }

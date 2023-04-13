@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Yarn.Unity;
+
+public class DialogueInitiator9000 : MonoBehaviour
+{
+    public DialogueRunner dR;
+    public BoxCollider2D Chi;
+    public BoxCollider2D[] charactersChiChiCanInteractWith;
+    public YarnProject[] yP;
+    // Start is called before the first frame update
+    void Awake()
+    {
+        dR = FindObjectOfType<DialogueRunner>();
+        //dR.AddCommandHandler<int>("numero", modifyHand);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        for(int i=0; i<charactersChiChiCanInteractWith.Length; ++i){
+            if(Chi.IsTouching(charactersChiChiCanInteractWith[i])){
+                if(Input.GetKeyDown(KeyCode.E)){
+                    dR.SetProject(yP[i]);
+                }
+            }
+        }
+    }
+}
