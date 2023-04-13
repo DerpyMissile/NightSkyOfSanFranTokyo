@@ -1,0 +1,46 @@
+﻿title: BazookaTime
+tags:
+---
+-> Look at Dog
+    <<jump BeholdBazook>>
+-> Pet Bazooka
+    <<jump PetBazook>>
+-> Talk to Bazooka
+    <<jump TalkBazook>>
+-> Lie down on the Dollar Tree floor with Bazooka
+-> Reflect upon life with Bazooka
+-> Gaze into Bazooka's eyes
+-> There... seems to be something under Bazooka
+    <<jump GetMoneyBazook>>
+===
+
+title: PetBazook
+---
+Chi Chi reaches down (I mean I guess Chi Chi doesn't really have to reach down cuz she's around the same height) and pets Bazooka.
+Bazooka: BORF!
+===
+
+title:BeholdBazook
+---
+Chi Chi: Hi... uhhhhhhhh...
+Fort: His name is Bazooka. Cool name, yeah?
+Chi Chi: I like it. It's like a mix of Barbie and Zoo Wee Mama.
+Fort: Huh? No, Bazooka like... the gun?
+Chi Chi: What's a gun?
+===
+
+title:TalkBazook
+---
+Chi Chi: Hi Bazooka.
+Bazooka: BORF!
+===
+
+title:GetMoneyBazook
+---
+...
+..
+..?
+What's this?
+HOLY SMOKES SWEET JAMBALAYA HOLY MAMA OH MOTHER OF GOD IS THIS...?!?!
+Chi Chi finds 50 cents under Bazooka's left frontal paw.
+===
