@@ -11,7 +11,7 @@ public class Item : MonoBehaviour
 
     bool colliding = false;
 
-    PlayerManager player;
+    public PlayerManager player;
 
     void Update(){
         if(colliding && Input.GetKeyDown(KeyCode.E)){
@@ -20,10 +20,10 @@ public class Item : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision){
-        player = collision.GetComponent<PlayerManager>();
-
-        if(player){
+    void OnTriggerEnter2D(Collider2D other){
+        int playerLayer = LayerMask.NameToLayer("player");
+        if (other.gameObject.layer == playerLayer)
+        {
             colliding = true;
         }
     }

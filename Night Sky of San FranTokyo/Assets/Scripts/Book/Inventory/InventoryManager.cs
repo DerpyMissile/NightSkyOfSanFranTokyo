@@ -4,26 +4,15 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public GameObject inventoryPanel;
     public PlayerManager player;
 
     public List<SlotUI> slots = new List<SlotUI>();
+
+
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Tab)){
-            ToggleInventory();
-        }
         Setup();
-    }
-
-    void ToggleInventory(){
-        if(!inventoryPanel.activeSelf){
-            inventoryPanel.SetActive(true);
-        }
-        else{
-            inventoryPanel.SetActive(false);
-        }
     }
 
     void Setup(){
@@ -38,4 +27,5 @@ public class InventoryManager : MonoBehaviour
             }
         }
     }
+
 }

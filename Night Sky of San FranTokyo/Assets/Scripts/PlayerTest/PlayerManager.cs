@@ -8,6 +8,6 @@ public class PlayerManager : MonoBehaviour
     public GameObject Player;
 
     public void Awake(){
-        inventory = new Inventory(1);
+        inventory = new Inventory(10);
     }
 }
