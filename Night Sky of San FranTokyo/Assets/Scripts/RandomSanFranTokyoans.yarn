@@ -1,0 +1,25 @@
+﻿title: Gunslinger
+tags:
+---
+Gunslinger: COME ONE, COME ALL!
+Gunslinger: ERE BE ANY WHO WISHES TO CHALLENGE I, GUN MCSLINGER OF THE GUNSLINGIN' CLAN OF NORTH DAKOTA?!
+Multiple murmurs can be heard throughout the crowd
+Chi Chi: ???
+Gunslinger: YOU THERE! CLOAKED IN THE IRIDESCENT PURPLE PLAID CLOTHES!
+Chi Chi: I'm not sure if something can be both iridescent and plaid-
+Gunslinger: Dare fancy thine hand against mine gun?!
+Chi Chi: But what can my hand do against a 14th century flintlock capable of launching projectiles upwards to 200 miles per hour when you stand over 50 feet-
+Gunslinger: ANYTHING IS POSSIBLE WITH ENOUGH WIT AND GRIT!
+Gunslinger: Plus, I have a dollar for you if you win.
+Chi Chi: DEAL.
+Press the E button when it says Draw to activate your secret skill, <Sky Piercer, of Heaven and Earth> to win this duel!
+Chi Chi: ...why the E button and not like space bar?
+Hao: cuz I couldn't get space bar to work NOW LOOK ALIVE KID HERE HE COMES!
+<<beginDuel 1>>
+===
+
+title: GunslingerWin
+tags:
+---
+
+===
