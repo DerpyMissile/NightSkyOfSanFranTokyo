@@ -11,7 +11,15 @@ public class SceneTransition : MonoBehaviour
     public Color blackScreen;
     bool cameraDetached = false;
     bool woahCoolManeuver = false;
+    float time = 0.0f;
     // Start is called before the first frame update
+
+    private IEnumerator waitASec(){
+        cameraDetached = !cameraDetached;
+        yield return new WaitForSeconds(1.0f);
+        StopCoroutine(waitASec());
+    }
+
     void Start()
     {
         
@@ -20,17 +28,21 @@ public class SceneTransition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!cameraDetached){
+            mainCam.transform.parent = player.transform;
+            mainCam.transform.position = new Vector3(player.transform.position.x, player.transform.position.y+2, player.transform.position.z-1);
+        }
+
         if(!woahCoolManeuver){
             for(int i=0; i<cameraNoWalls.Length; ++i){
-                if(player.GetComponent<BoxCollider2D>().IsTouching(cameraNoWalls[i])){
+                if(player.GetComponent<BoxCollider2D>().IsTouching(cameraNoWalls[i]) && time > 1.0f){
+                    Debug.Log("istouch");
+                    time = 0;
                     mainCam.transform.parent = null;
                     cameraDetached = !cameraDetached;
+                    //StartCoroutine(waitASec());
                     //i--;
-                }else{
-                    if(!cameraDetached){
-                        mainCam.transform.parent = player.transform;
-                        mainCam.transform.position = new Vector3(player.transform.position.x, player.transform.position.y+2, player.transform.position.z-1);
-                    }
+                    //the above code breaks everything lmao
                 }
             }
         }
@@ -58,5 +70,7 @@ public class SceneTransition : MonoBehaviour
                 woahCoolManeuver = false;
             }
         }
+
+        time += Time.deltaTime;
     }
 }
