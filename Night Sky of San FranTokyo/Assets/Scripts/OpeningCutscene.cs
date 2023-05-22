@@ -6,21 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class OpeningCutscene : MonoBehaviour
 {
-    public GameObject background;
+    static public SpriteRenderer background;
     // Start is called before the first frame update
     void Start()
     {
-        
+        background = GameObject.FindWithTag("Background").GetComponent<SpriteRenderer>();
     }
 
     [YarnCommand("fade_background")]
     static IEnumerator backgroundCoolThing(){
-        
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(1.0f);
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("ActualGame");
 
-
+        for(int i=0; i<255; ++i){
+            background.color += new Color(0, 0, 0, 0.01f);
+            yield return new WaitForSeconds(0.05f);
+        }
 
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)
