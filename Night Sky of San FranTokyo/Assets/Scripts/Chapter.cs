@@ -9,4 +9,8 @@ public static class Chapter
     public static void incChap(){
         chapNum++;
     }
+
+    public static int getChap(){
+        return chapNum;
+    }
 }
