@@ -9,6 +9,7 @@ public class SceneTransition : MonoBehaviour
     public BoxCollider2D[] cameraNoWalls;
     public Camera mainCam;
     public Color blackScreen;
+    public DialogueInitiator9000 dia;
     bool cameraDetached = false;
     bool woahCoolManeuver = false;
     float time = 0.0f;
@@ -39,6 +40,7 @@ public class SceneTransition : MonoBehaviour
                     Debug.Log("istouch");
                     time = 0;
                     mainCam.transform.parent = null;
+                    mainCam.transform.position = new Vector3(mainCam.transform.position.x, player.transform.position.y+2, mainCam.transform.position.z-10);
                     cameraDetached = !cameraDetached;
                     //StartCoroutine(waitASec());
                     //i--;
@@ -51,10 +53,13 @@ public class SceneTransition : MonoBehaviour
             if(player.GetComponent<BoxCollider2D>().IsTouching(walls[i])){
 
                 //MIGHT NOT BE THE BEST PLACE TO PUT IT BUT DUCK IT WE BALL
-                if(Chapter.getChap() <= 0 && i>2){
+                if(Chapter.getChap() <= 0 && i>1){
                     //this is if Chi Chi decides to go right first thing
                     //reminder for Hao to make a text thing where it goes Chi Chi kinda says no
-                    player.transform.position = new Vector3(cameraNoWalls[i].transform.position.x, player.transform.position.y, player.transform.position.z);
+                    player.transform.position = new Vector3(cameraNoWalls[i].transform.position.x-5, player.transform.position.y, player.transform.position.z);
+                    woahCoolManeuver = false;
+                    cameraDetached = false;
+                    return;
                 }
 
                 woahCoolManeuver = true;
@@ -75,6 +80,7 @@ public class SceneTransition : MonoBehaviour
                         player.transform.position = new Vector3(walls[i-1].transform.position.x - k, player.transform.position.y, player.transform.position.z);
                     }
                 }
+                mainCam.transform.position = new Vector3(mainCam.transform.position.x, mainCam.transform.position.y, mainCam.transform.position.z-10);
                 woahCoolManeuver = false;
             }
         }

@@ -17,12 +17,12 @@ public class OpeningCutscene : MonoBehaviour
     static IEnumerator backgroundCoolThing(){
         yield return new WaitForSeconds(1.0f);
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("ActualGame");
-
         for(int i=0; i<255; ++i){
             background.color += new Color(0, 0, 0, 0.01f);
             yield return new WaitForSeconds(0.05f);
         }
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("ActualGame");
 
         // Wait until the asynchronous scene fully loads
         while (!asyncLoad.isDone)
