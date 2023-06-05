@@ -12,4 +12,6 @@ public class PlayerController : MonoBehaviour
         Vector3 direction = new Vector3(horizontal, vertical);
         transform.position += direction * moveSpeed * Time.deltaTime;
     }
+
+    
 }

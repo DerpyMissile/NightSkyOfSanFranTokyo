@@ -18,7 +18,7 @@ public class SlotUI : MonoBehaviour
 
     public void SetEmpty(){
         itemIcon.sprite = null;
-        itemIcon.color = new Color(1,1,1,0);
-        quantityText.text = "";
+        itemIcon.color = new Color(255,255,255,0);
+        quantityText.text = "0";
     }
 }
