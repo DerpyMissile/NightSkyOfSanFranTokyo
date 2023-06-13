@@ -53,14 +53,14 @@ public class SceneTransition : MonoBehaviour
             if(player.GetComponent<BoxCollider2D>().IsTouching(walls[i])){
 
                 //MIGHT NOT BE THE BEST PLACE TO PUT IT BUT DUCK IT WE BALL
-                if(Chapter.getChap() <= 0 && i>1){
-                    //this is if Chi Chi decides to go right first thing
-                    //reminder for Hao to make a text thing where it goes Chi Chi kinda says no
-                    player.transform.position = new Vector3(cameraNoWalls[i].transform.position.x-5, player.transform.position.y, player.transform.position.z);
-                    woahCoolManeuver = false;
-                    cameraDetached = false;
-                    return;
-                }
+                // if(Chapter.getChap() <= 0 && i>1){
+                //     //this is if Chi Chi decides to go right first thing
+                //     //reminder for Hao to make a text thing where it goes Chi Chi kinda says no
+                //     player.transform.position = new Vector3(cameraNoWalls[i].transform.position.x-5, player.transform.position.y, player.transform.position.z);
+                //     woahCoolManeuver = false;
+                //     cameraDetached = false;
+                //     return;
+                // }
 
                 woahCoolManeuver = true;
                 if(i%2==0){

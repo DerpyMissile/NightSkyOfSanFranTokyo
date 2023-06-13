@@ -13,6 +13,7 @@ public class DialogueInitiator9000 : MonoBehaviour
     public string[] storyDialogues = {"Chapter0Start", "Chapter0HeyGetBackOverHere", "Chapter0Reunion", "Chapter0Mental1", "Chapter0Mental2", "Chapter0Mental3", "Chapter0Mental4", "Chapter0End"};
     public string[] paperLore = {};
     public YarnProject yP1;
+    public YarnProject yP2; 
     public Image leftPortrait;
     public Image rightPortrait;
     public Image leftChibi;
@@ -51,7 +52,7 @@ public class DialogueInitiator9000 : MonoBehaviour
 
     public void charaDialogue(int whichPart){
         Debug.Log(whichPart);
-        dR.SetProject(yP1);
+        dR.SetProject(yP2);
         dR.StartDialogue(charaDialogues[whichPart]);
     }
 

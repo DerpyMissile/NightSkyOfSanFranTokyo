@@ -334,7 +334,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44154359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.83, y: -22.572735, z: -1}
+  m_LocalPosition: {x: 68.83, y: -23.09, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -468,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7216301574595916892, guid: 0b347dd522f007243878ce0289b3bb89, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.34
+      value: 12.75
       objectReference: {fileID: 0}
     - target: {fileID: 7216301574595916892, guid: 0b347dd522f007243878ce0289b3bb89, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2874,14 +2874,15 @@ MonoBehaviour:
   - {fileID: 767650625}
   - {fileID: 210012036}
   charaDialogues:
-  - MeetDoc
-  - MeetFort
-  - BazookaTime
+  - DocDialogue
+  - FortDialogue
+  - BazookaDialogue
   storyDialogues:
   - Chapter0
   - Chapter0HeyGetBackOverHere
   paperLore: []
   yP1: {fileID: 7545569452688597077, guid: d09e8bbed722a5a4bbd0652a5d32e8a5, type: 3}
+  yP2: {fileID: 7545569452688597077, guid: d2d4778ce5874eb47baf7ac27a90439c, type: 3}
   leftPortrait: {fileID: 2113206933}
   rightPortrait: {fileID: 1744375003}
   leftChibi: {fileID: 824600630}
@@ -2899,7 +2900,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Chi: {fileID: 6978230}
-  sceneInteract: []
+  sceneInteract:
+  - {fileID: 44154363}
   sceneInteractDestination: []
   sceneInteractGoBack: []
 --- !u!1 &1029014610
